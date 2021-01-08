@@ -1,0 +1,436 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"demiDebot","type":"address"},
+				{"name":"demiurge","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateABI",
+			"inputs": [
+				{"name":"kind","type":"uint8"},
+				{"name":"sabi","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updatePadavan",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "fetch",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"id","type":"uint8"},{"name":"desc","type":"bytes"},{"components":[{"name":"desc","type":"bytes"},{"name":"name","type":"bytes"},{"name":"actionType","type":"uint8"},{"name":"attrs","type":"bytes"},{"name":"to","type":"uint8"},{"name":"misc","type":"cell"}],"name":"actions","type":"tuple[]"}],"name":"contexts","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getVersion",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"semver","type":"uint24"}
+			]
+		},
+		{
+			"name": "quit",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getErrorDescription",
+			"inputs": [
+				{"name":"error","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"desc","type":"bytes"}
+			]
+		},
+		{
+			"name": "switchTargetToDemiurge",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "switchTargetToPadavan",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "generateId",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"desc","type":"bytes"},{"name":"name","type":"bytes"},{"name":"actionType","type":"uint8"},{"name":"attrs","type":"bytes"},{"name":"to","type":"uint8"},{"name":"misc","type":"cell"}],"name":"actions","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getLength",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"length","type":"uint32"}
+			]
+		},
+		{
+			"name": "setRandom",
+			"inputs": [
+				{"name":"buffer","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setVoteInfo",
+			"inputs": [
+				{"name":"reqVotes","type":"uint32"},
+				{"name":"totalVotes","type":"uint32"},
+				{"name":"lockedVotes","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setActiveProps",
+			"inputs": [
+				{"name":"activeProposals","type":"map(address,uint32)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getVoteArgs",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"number0","type":"uint32"},
+				{"name":"number1","type":"uint32"},
+				{"name":"number2","type":"uint32"},
+				{"name":"number3","type":"uint32"},
+				{"name":"param4","type":"address"}
+			]
+		},
+		{
+			"name": "setProposalData",
+			"inputs": [
+				{"components":[{"name":"id","type":"uint32"},{"name":"state","type":"uint8"},{"name":"userWalletAddress","type":"address"},{"name":"addr","type":"address"},{"name":"ts","type":"uint32"}],"name":"proposals","type":"map(uint32,tuple)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setProposalInfo",
+			"inputs": [
+				{"components":[{"name":"id","type":"uint32"},{"name":"start","type":"uint32"},{"name":"end","type":"uint32"},{"name":"options","type":"uint16"},{"name":"totalVotes","type":"uint32"},{"name":"description","type":"bytes"},{"name":"text","type":"bytes"},{"name":"voters","type":"address[]"},{"name":"ts","type":"uint32"}],"name":"proposals","type":"map(uint32,tuple)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "printProposals",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"desc","type":"bytes"},{"name":"name","type":"bytes"},{"name":"actionType","type":"uint8"},{"name":"attrs","type":"bytes"},{"name":"to","type":"uint8"},{"name":"misc","type":"cell"}],"name":"actions","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getProposalArgs",
+			"inputs": [
+				{"name":"misc","type":"cell"}
+			],
+			"outputs": [
+				{"name":"number0","type":"uint32"},
+				{"name":"str1","type":"bytes"},
+				{"name":"utime2","type":"uint32"},
+				{"name":"utime3","type":"uint32"},
+				{"name":"str4","type":"bytes"},
+				{"name":"number5","type":"uint32"},
+				{"name":"str6","type":"bytes"},
+				{"name":"param7","type":"address"},
+				{"name":"param8","type":"address"}
+			]
+		},
+		{
+			"name": "printActiveProposals",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"desc","type":"bytes"},{"name":"name","type":"bytes"},{"name":"actionType","type":"uint8"},{"name":"attrs","type":"bytes"},{"name":"to","type":"uint8"},{"name":"misc","type":"cell"}],"name":"actions","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "enterProposalId",
+			"inputs": [
+				{"name":"id","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterVotes",
+			"inputs": [
+				{"name":"votes","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterTons",
+			"inputs": [
+				{"name":"tons","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterTokens",
+			"inputs": [
+				{"name":"value","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterReturnTo",
+			"inputs": [
+				{"name":"returnTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterRootAddress",
+			"inputs": [
+				{"name":"root","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterMaxVotes",
+			"inputs": [
+				{"name":"maxVotes","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterStart",
+			"inputs": [
+				{"name":"start","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterEnd",
+			"inputs": [
+				{"name":"end","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterDesc",
+			"inputs": [
+				{"name":"desc","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterProposalText",
+			"inputs": [
+				{"name":"text","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterModelSuper",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "enterModelSoft",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendRequestPadavan",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendVoteForYes",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendVoteForNo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendRequestProposal",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendDepositTons",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendDepositTokens",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendReclaimDeposit",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "sendCreateAccount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"dest","type":"address"},
+				{"name":"body","type":"cell"}
+			]
+		},
+		{
+			"name": "requestPadavan",
+			"inputs": [
+				{"name":"userKey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "requestProposal",
+			"inputs": [
+				{"name":"totalVotes","type":"uint32"},
+				{"name":"start","type":"uint32"},
+				{"name":"end","type":"uint32"},
+				{"name":"description","type":"bytes"},
+				{"name":"text","type":"bytes"},
+				{"name":"model","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "depositTons",
+			"inputs": [
+				{"name":"tons","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "depositTokens",
+			"inputs": [
+				{"name":"returnTo","type":"address"},
+				{"name":"tokenId","type":"uint256"},
+				{"name":"tokens","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "reclaimDeposit",
+			"inputs": [
+				{"name":"votes","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "voteFor",
+			"inputs": [
+				{"name":"proposal","type":"address"},
+				{"name":"choice","type":"bool"},
+				{"name":"votes","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createTokenAccount",
+			"inputs": [
+				{"name":"root","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"bytes"},
+				{"name":"targetAbi","type":"bytes"},
+				{"name":"targetAddr","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
