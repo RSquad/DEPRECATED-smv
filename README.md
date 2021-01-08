@@ -166,9 +166,7 @@ Called by Padavans to vote for the proposal. Proposal makes a verification check
 
 `wrapUp()`
 
-Can be called by any smart contract by internal message. Asks
-
-### Proposal to update its status.
+Can be called by any smart contract by internal message. Asks Proposal to update its status.
 
 #### **Demiurge Debot**
 
@@ -199,7 +197,7 @@ https://github.com/tonlabs/ton-labs-contracts/tree/master/cpp/solidity/depool
 
 Simple smart contract that implements an interface of converting tons and tokens to votes.
 
-## Smart contracts used by test system
+### Smart contracts used by test system
 
 #### **UserWallet**
 
