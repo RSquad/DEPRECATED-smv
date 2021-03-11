@@ -97,10 +97,10 @@ contract Demiurge is IDemiurge, IDemiurgeStoreCallback, Base {
 
         if (store != address(0)) {
             demiStore = store;
-            DemiurgeStore(demiStore).queryImage{value: 0.02 ton, bounce: true}(ContractType.Proposal);
-            DemiurgeStore(demiStore).queryImage{value: 0.02 ton, bounce: true}(ContractType.Padavan);
-            DemiurgeStore(demiStore).queryDepools{value: 0.02 ton, bounce: true}();
-            DemiurgeStore(demiStore).queryAddress{value: 0.02 ton, bounce: true}(ContractType.PriceProvider);
+            DemiurgeStore(demiStore).queryImage{value: 0.2 ton, bounce: true}(ContractType.Proposal);
+            DemiurgeStore(demiStore).queryImage{value: 0.2 ton, bounce: true}(ContractType.Padavan);
+            DemiurgeStore(demiStore).queryDepools{value: 0.2 ton, bounce: true}();
+            DemiurgeStore(demiStore).queryAddress{value: 0.2 ton, bounce: true}(ContractType.PriceProvider);
         }
         _deployedPadavansCounter = 0;
         _deployedProposalsCounter = 0;

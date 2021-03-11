@@ -52,7 +52,7 @@ abstract contract PadavanClient is Base {
     function voteFor(address proposal, bool choice, uint32 votes) public view signed {
         IPadavan(_padavan).voteFor{value: 1 ton, bounce: true}
             (proposal, choice, votes);
-        IProposal(proposal).wrapUp{value: 0.02 ton}();
+        IProposal(proposal).wrapUp{value: 0.1 ton}();
     }
 
     function createTokenAccount(address root) public view signed {
@@ -156,10 +156,10 @@ contract VotingDebot is Debot, DError, PadavanClient, DemiurgeClient {
         _demiurge = demiurge;
         _demiDebot = demiDebot;
         
-        DemiurgeStore(demiDebot).queryABI{value: 0.02 ton, bounce: true}(ContractType.Proposal);
-        DemiurgeStore(demiDebot).queryABI{value: 0.02 ton, bounce: true}(ContractType.Demiurge);
-        DemiurgeStore(demiDebot).queryABI{value: 0.02 ton, bounce: true}(ContractType.VotingDebot);
-        DemiurgeStore(demiDebot).queryABI{value: 0.02 ton, bounce: true}(ContractType.Padavan);
+        DemiurgeStore(demiDebot).queryABI{value: 0.2 ton, bounce: true}(ContractType.Proposal);
+        DemiurgeStore(demiDebot).queryABI{value: 0.2 ton, bounce: true}(ContractType.Demiurge);
+        DemiurgeStore(demiDebot).queryABI{value: 0.2 ton, bounce: true}(ContractType.VotingDebot);
+        DemiurgeStore(demiDebot).queryABI{value: 0.2 ton, bounce: true}(ContractType.Padavan);
     }
 
     function updateABI(ContractType kind, string sabi) external {
@@ -179,6 +179,7 @@ contract VotingDebot is Debot, DError, PadavanClient, DemiurgeClient {
     }
 
     function updatePadavan(address addr) external override {
+        tvm.accept();
         _padavan = addr;
         m_target = addr;
         m_options |= DEBOT_TARGET_ADDR;
